@@ -1,0 +1,43 @@
+/* logim*/
+CREATE DATABASE hostel;
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+/*register*/
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    address TEXT NOT NULL
+);
+
+
+
+/*book/apply*/
+
+USE hostel;
+
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    student_id VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    room_type VARCHAR(20) NOT NULL,
+    comments TEXT,
+    application_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+/*avilable room*/
+CREATE TABLE rooms (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    room_number VARCHAR(50) NOT NULL,
+    room_type VARCHAR(50) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'Available'
+);
