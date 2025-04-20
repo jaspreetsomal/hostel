@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="room_apply.css">
+    
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Hostel Logo" class="logo">
+            <span class="hostel-name">Hostel </span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="room_price.php">Rooms & Pricing</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#notice">Notice Board</a></li>
+            <li class="auth-buttons"><a href="login.html" class="login-btn">Login</a></li>
+            <li class="auth-buttons"><a href="registration.html" class="register-btn">Register</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+    </nav>
+
+
+    <!--home section-->
+    
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Our Hostel</h1>
+        <p>Your Comfort, Our Priority!</p>
+   <p>Your home away from home. Our hostel offers a friendly atmosphere, comfortable rooms, and a variety of amenities to make your stay memorable.</p>
+        </div>
+    
+        <!-- Hostel Images/Slideshow -->
+        <div class="image-gallery">
+            <img src="../pic/hostal3.png" alt="Hostel Image 1">
+            <img src="../pic/hostal2.png" alt="Hostel Image 2">
+            <img src="../pic/hostal1.png" alt="Hostel Image 3">
+        </div>
+    
+        <!-- Quick Links -->
+        <div class="quick-links">
+            <a href="#booking">Book Now</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    
+               <!-- Boys' and Girls' Hostel Section -->
+        <div class="hostel-selection">
+            <div class="hostel-card">
+                <img src="../pic/boys.png" alt="Boys' Hostel">
+                <button onclick="window.location.href='boys_hostel.php'">Boys' Hostel</button>
+            </div>
+            <div class="hostel-card">
+                <img src="../pic/girls1.png"width=100% alt="Girls' Hostel">
+                <button onclick="window.location.href='girls_hostel.php'">Girls' Hostel</button>
+            </div>
+        </div>
+    </section>
+
+    
+<!--about us section-->
+<section id ="about">
+    <div class="about-container">
+        <div class="image-container">
+            <img src="../pic/background1.png" alt="Hostel Image">
+        </div>
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Welcome to our hostel, a comfortable and affordable place to stay. Whether you're a student, traveler, or professional, we offer a safe and friendly environment with modern amenities.</p>
+            
+            <section class="why-choose">
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li>->Prime location with easy access to transport</li>
+                    <li>->Budget-friendly accommodations with modern facilities</li>
+                    <li>->24/7 security for a safe and secure environment</li>
+                    <li>->High-speed Wi-Fi for seamless connectivity</li>
+                    <li>->Friendly community events and social gatherings</li>
+                </ul>
+            </section>
+            
+            <section class="facilities">
+                <h2>Our Facilities</h2>
+                <ul>
+                    <li>Spacious, well-lit rooms with comfortable bedding</li>
+                    <li>24-hour CCTV surveillance and secure entry</li>
+                    <li>Fully equipped kitchen and common dining area</li>
+                    <li>Laundry facilities and housekeeping services</li>
+                    <li>Recreational lounge with TV, books, and games</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+
+
+<!--galery-->
+
+<section id="gallery" >
+
+<div class="gallery-section">
+    <h2>Hostel Gallery</h2>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="../pic/sit.png" alt="Hostel Exterior">
+        </div>
+        <div class="gallery-item">
+            <img src="../pic/bed1.png" alt="Hostel Room">
+        </div>
+        <div class="gallery-item">
+            <img src="../pic/dinear.png" alt="Dining Area">
+        </div>
+        <div class="gallery-item">
+            <img src="../pic/comman.png" alt="Common Area">
+        </div>
+        <div class="gallery-item">
+            <img src="../pic/comman1.png" alt="Common Area">
+        </div>
+        <div class="gallery-item">
+            <img src="../pic/hostel-washroom.png" alt="Clean Washrooms">
+        </div>
+        <div class="gallery-item">
+            <img src="../pic/2.png" alt="Clean Washrooms">
+        </div>
+        <div class="gallery-item">
+            <img src="../pic/event.png" alt="Hostel Event">
+        </div>
+    </div>
+    </div>
+    </section>
+</section>
+
+
+
+<!--booking/apply-->
+<section id="booking">
+    <div class="booking-container">
+<h2 style="text-align:center;">Apply / Book a Room</h2>
+
+<form action="room.php" method="POST" class="booking-form">
+    <label>Full Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Student ID:</label>
+    <input type="text" name="student_id" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Room Preference:</label>
+    <select name="room_type" required>
+        <option value="">--Select--</option>
+        <option value="Single">Single</option>
+        <option value="Double">Double</option>
+        <option value="Triple">Triple</option>
+    </select>
+
+    <label>Comments (Optional):</label>
+    <textarea name="comments"></textarea>
+
+    <button type="submit">Apply Now</button>
+</form>
+</div>
+</section>
+
+
+
+<!--notice board-->
+
+<section id="notice">
+    <div class="notice-board">
+    <h2>Hostel Notice Board</h2>
+    <div class="notice-container">
+        <div class="scrolling-text">
+            <div class="notice"><strong>⚠ Maintenance Notice:</strong> Water supply will be interrupted from 10 AM - 2 PM on April 5.</div>
+            <div class="notice"><strong>📢 Upcoming Event:</strong> Cultural Night on April 10 in the common hall.</div>
+            <div class="notice"><strong>🍽 Meal Schedule:</strong> Special dinner on April 7 (Biryani Night).</div>
+            <div class="notice"><strong>🚨 Safety Update:</strong> Fire drill on April 12 at 3 PM. Participation is mandatory.</div>
+            <div class="notice"><strong>🔍 Lost & Found:</strong> A black wallet was found in the study room. Contact reception.</div>
+            <div class="notice"><strong>🏠 Hostel Rules Reminder:</strong> Curfew time is 10 PM. Please adhere to hostel regulations.</div>
+        </div>
+    </div>
+    </div>
+    
+</section>
+
+
+<!---contact details-->
+<section id="contact">
+
+    <div class="contact-container">
+     <h2>Contact Us</h2>
+     <div class="contact-form">
+         <!-- Contact Form -->
+ <form id="contactForm" action="contact.php" method="POST">
+ 
+     <input type="text" id="name" placeholder="Your Name" required>
+     <input type="email" id="email" placeholder="Your Email" required>
+     <input type="tel" id="phone" placeholder="Your Phone (Optional)">
+             <textarea id="message" placeholder="Your Message" required></textarea><br>
+                 <button type="submit">Send Message</button>
+ </form>
+ </div>
+  <!-- Google Map -->
+  <div class="map">
+     <iframe 
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509366!2d144.96305791531998!3d-37.81627977975156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df9df3bfb%3A0xa0da5765a3df4b6!2sCozy%20Cafe!5e0!3m2!1sen!2sus!4v1635663943210!5m2!1sen!2sus" 
+         allowfullscreen="" 
+         loading="lazy">
+     </iframe>
+ </div>
+ </section>
+
+<script src="script.js"></script>
+    </body>
+</html>

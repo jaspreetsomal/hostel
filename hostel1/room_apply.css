@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.room-table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+.room-table th, .room-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.room-table th {
+    background-color: #007bff;
+    color: white;
+}
+.available {
+    color: green;
+}
+.booked {
+    color: red;
+}
+
+/*gallery of boy-hostel*/
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+/*apply/booking*/
+.booking-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.booking-form {
+    width: 60%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form label {
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.booking-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #0056b3;
+}
